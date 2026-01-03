@@ -1,4 +1,4 @@
-# Hind-Led-Quadruped-Rig
+# Hind-Leg-Quadruped-Rig
 
 ## Demo
 Demo Video: 

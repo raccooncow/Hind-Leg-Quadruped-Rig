@@ -4,7 +4,7 @@
 Demo Video: 
 
 ## GitHub Repository
-GitHub Repo: https://github.com/raccooncow/Hind-Led-Quadruped-Rig.git
+GitHub Repo: https://github.com/raccooncow/Hind-Leg-Quadruped-Rig.git
 
 ## Description
 This script creates a quad hind-leg IK setup in Maya by building a paw and foot-roll control, adding IK handles and a knee pole-vector control, organizing them into a clean hierarchy, zeroing transforms, and hiding the IK handles for clean animation use.

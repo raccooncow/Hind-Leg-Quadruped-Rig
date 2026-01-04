@@ -1,3 +1,5 @@
+import maya.cmds as cmds
+
 # User selects all properly named leg JNTs
 # Get currently selected objects
 # Confirm all five joints are selected

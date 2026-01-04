@@ -5,6 +5,10 @@ import maya.cmds as cmds
 # Confirm all five joints are selected
 # Assign joints in order:
 # hip, knee, ankle, hock, toe
+selection = cmds.ls(sl=True)
+if len(selection) != 5:
+    cmds.error("Please select these joints in this order: hip → knee → ankle → hock → toe")
+hip, knee, ankle, hock, toe = selection
 
 # Create paw con + grp
 # Create NURBS circle for paw con

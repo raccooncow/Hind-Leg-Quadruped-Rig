@@ -58,6 +58,7 @@ IKH_GRP = cmds.group([toe_IKH, hock_IKH], name='IKH_GRP')
 cmds.makeIdentity(IKH_GRP, apply=True, t=1, r=1, s=1, n=0)
 cmds.delete(IKH_GRP, ch=True)
 
+
 # footRoll hierarchy
 # Parent IKH under footRoll con
 cmds.parent(IKH_GRP, footRoll_CON)
@@ -69,7 +70,13 @@ cmds.parent(footRoll_GRP, paw_CON)
 
 # Knee PV con + grp
 # Create triangle con knee PV
+knee_PV_CON = cmds.curve(
+    name='knee_PV_CON',
+    d=1,
+    p=[(0,0,0),(1,2,0),(-1,2,0),(0,0,0)]
+)
 # Group PV con
+knee_PV_GRP = cmds.group(knee_PV_CON, name='knee_PV_GRP')
 # Rotate PV con con so its flat
 # Freeze transforms + clean history
 # PV con in front of knee

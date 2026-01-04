@@ -110,3 +110,6 @@ cmds.delete(knee_IKH_GRP, ch=True)
 # Cons have 0 transforms
 # Pivots are centered
 # Hide IKH from hierarchy
+cmds.setAttr(toe_IKH + ".visibility", 0)
+cmds.setAttr(hock_IKH + ".visibility", 0)
+cmds.setAttr(knee_IKH + ".visibility", 0)

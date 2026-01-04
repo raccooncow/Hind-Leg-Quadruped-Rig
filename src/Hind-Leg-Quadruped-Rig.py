@@ -39,6 +39,10 @@ cmds.xform(footRoll_GRP, ws=True, t=hock_pos)
 # Rotate footRoll con so its flat
 cmds.setAttr(footRoll_CON + ".rotateZ", 90)
 # Freeze transforms + clean history
+cmds.makeIdentity(footRoll_CON, apply=True, t=1, r=1, s=1, n=0)
+cmds.delete(footRoll_CON, ch=True)
+cmds.makeIdentity(footRoll_GRP, apply=True, t=1, r=1, s=1, n=0)
+cmds.delete(footRoll_GRP, ch=True)
 
 
 # IKH

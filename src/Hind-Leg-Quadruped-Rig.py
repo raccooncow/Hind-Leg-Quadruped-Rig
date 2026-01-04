@@ -12,10 +12,15 @@ hip, knee, ankle, hock, toe = selection
 
 # Create paw con + grp
 # Create NURBS circle for paw con
+paw_CON = cmds.circle(name='paw_CON', normal=[1,0,0], radius=1.5)[0]
 # Group paw con
+paw_GRP = cmds.group(paw_CON, name='paw_GRP')
 # Snap paw grp to hock jnt
+
 # Rotate paw con so its flat
+
 # Freeze transforms + clean history
+
 
 # footRoll con + grp
 # Create smaller NURBS circle for footRoll con

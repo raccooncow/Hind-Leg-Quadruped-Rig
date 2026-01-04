@@ -16,7 +16,9 @@ paw_CON = cmds.circle(name='paw_CON', normal=[1,0,0], radius=1.5)[0]
 # Group paw con
 paw_GRP = cmds.group(paw_CON, name='paw_GRP')
 # Snap paw grp to hock jnt
-
+hock_pos = cmds.xform(hock, q=True, ws=True, t=True)
+paw_grp_pos = [hock_pos[0], 0, hock_pos[2]]
+cmds.xform(paw_GRP, ws=True, t=paw_grp_pos)
 # Rotate paw con so its flat
 
 # Freeze transforms + clean history

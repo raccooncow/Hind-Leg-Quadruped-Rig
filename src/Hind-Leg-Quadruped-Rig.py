@@ -29,11 +29,17 @@ cmds.delete(paw_GRP, ch=True)
 
 
 # footRoll con + grp
+
 # Create smaller NURBS circle for footRoll con
+footRoll_CON = cmds.circle(name='footRoll_CON', normal=[1,0,0], radius=1.0)[0]
 # Group footRoll con
+footRoll_GRP = cmds.group(empty=True, name='footRoll_GRP')
 # Snap con + grp to hock jnt
+
 # Rotate footRoll con so its flat
+
 # Freeze transforms + clean history
+
 
 # IKH
 # toe IKH (hock --> toe)

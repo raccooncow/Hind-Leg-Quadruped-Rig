@@ -97,9 +97,9 @@ cmds.poleVectorConstraint(knee_PV_CON, knee_IKH)
 # Parent PV group under paw con
 cmds.parent(knee_PV_GRP, paw_CON)
 # Group knee IKH
-
+knee_IKH_GRP = cmds.group(knee_IKH, name='knee_IKH_GRP')
 # Parent it under paw con
-
+cmds.parent(knee_IKH_GRP, paw_CON)
 # Move grp PV to hock jnt
 
 

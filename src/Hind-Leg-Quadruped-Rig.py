@@ -84,6 +84,10 @@ cmds.setAttr(knee_PV_CON + ".rotateY", 90)
 cmds.makeIdentity(knee_PV_CON, apply=True, t=1, r=1, s=1, n=0)
 cmds.delete(knee_PV_CON, ch=True)
 # PV con in front of knee
+knee_pos = cmds.xform(knee, q=True, ws=True, t=True)
+pv_offset = 5.0
+pv_pos = [knee_pos[0] + pv_offset, knee_pos[1], knee_pos[2]]
+cmds.xform(knee_PV_GRP, ws=True, t=pv_pos)
 
 
 # Connect PV con to knee IKH

@@ -53,7 +53,10 @@ knee_IKH = cmds.ikHandle(sj=hip, ee=ankle, sol='ikRPsolver', name='knee_IKH')[0]
 # hock IKH (ankle --> hock)
 hock_IKH = cmds.ikHandle(sj=ankle, ee=hock, sol='ikSCsolver', name='hock_IKH')[0]
 # GRP toe + hock IKH together
+IKH_GRP = cmds.group([toe_IKH, hock_IKH], name='IKH_GRP')
 # Freeze transforms on IKH group
+cmds.makeIdentity(IKH_GRP, apply=True, t=1, r=1, s=1, n=0)
+cmds.delete(IKH_GRP, ch=True)
 
 # footRoll hierarchy
 # Parent IKH under footRoll con

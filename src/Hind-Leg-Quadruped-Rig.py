@@ -20,8 +20,12 @@ hock_pos = cmds.xform(hock, q=True, ws=True, t=True)
 paw_grp_pos = [hock_pos[0], 0, hock_pos[2]]
 cmds.xform(paw_GRP, ws=True, t=paw_grp_pos)
 # Rotate paw con so its flat
-
+cmds.setAttr(paw_CON + ".rotateZ", 90)
 # Freeze transforms + clean history
+cmds.makeIdentity(paw_CON, apply=True, t=1, r=1, s=1, n=0)
+cmds.delete(paw_CON, ch=True)
+cmds.makeIdentity(paw_GRP, apply=True, t=1, r=1, s=1, n=0)
+cmds.delete(paw_GRP, ch=True)
 
 
 # footRoll con + grp

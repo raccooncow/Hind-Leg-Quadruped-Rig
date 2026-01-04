@@ -88,13 +88,19 @@ knee_pos = cmds.xform(knee, q=True, ws=True, t=True)
 pv_offset = 5.0
 pv_pos = [knee_pos[0] + pv_offset, knee_pos[1], knee_pos[2]]
 cmds.xform(knee_PV_GRP, ws=True, t=pv_pos)
+cmds.makeIdentity(knee_PV_GRP, apply=True, t=1, r=1, s=1, n=0)
+cmds.delete(knee_PV_GRP, ch=True)
 
 
 # Connect PV con to knee IKH
 # Parent PV group under paw con
+
 # Group knee IKH
+
 # Parent it under paw con
+
 # Move grp PV to hock jnt
+
 
 # Cleanup freeze transform + delete history
 # Cons have 0 transforms

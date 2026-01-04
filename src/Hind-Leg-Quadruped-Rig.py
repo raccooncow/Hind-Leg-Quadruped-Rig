@@ -60,8 +60,12 @@ cmds.delete(IKH_GRP, ch=True)
 
 # footRoll hierarchy
 # Parent IKH under footRoll con
+cmds.parent(IKH_GRP, footRoll_CON)
 # Build hierarchy:
 # paw_GRP, paw_CON, footRoll_GRP, footRoll_CON, IKH_GRP
+cmds.parent(footRoll_CON, footRoll_GRP)
+cmds.parent(footRoll_GRP, paw_CON)
+
 
 # Knee PV con + grp
 # Create triangle con knee PV

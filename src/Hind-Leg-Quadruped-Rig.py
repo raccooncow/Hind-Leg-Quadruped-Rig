@@ -47,8 +47,11 @@ cmds.delete(footRoll_GRP, ch=True)
 
 # IKH
 # toe IKH (hock --> toe)
+toe_IKH = cmds.ikHandle(sj=hock, ee=toe, sol='ikSCsolver', name='toe_IKH')[0]
 # main leg IKH (hip --> ankle)
+knee_IKH = cmds.ikHandle(sj=hip, ee=ankle, sol='ikRPsolver', name='knee_IKH')[0]
 # hock IKH (ankle --> hock)
+hock_IKH = cmds.ikHandle(sj=ankle, ee=hock, sol='ikSCsolver', name='hock_IKH')[0]
 # GRP toe + hock IKH together
 # Freeze transforms on IKH group
 

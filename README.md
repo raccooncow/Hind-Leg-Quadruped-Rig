@@ -1,7 +1,7 @@
 # Hind-Leg-Quadruped-Rig
 
 ## Demo
-Demo Video: 
+Demo Video: https://youtu.be/mhE9yCYi3RQ
 
 ## GitHub Repository
 GitHub Repo: https://github.com/raccooncow/Hind-Leg-Quadruped-Rig.git

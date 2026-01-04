@@ -78,8 +78,13 @@ knee_PV_CON = cmds.curve(
 # Group PV con
 knee_PV_GRP = cmds.group(knee_PV_CON, name='knee_PV_GRP')
 # Rotate PV con con so its flat
+cmds.setAttr(knee_PV_CON + ".rotateX", 90)
+cmds.setAttr(knee_PV_CON + ".rotateY", 90)
 # Freeze transforms + clean history
+cmds.makeIdentity(knee_PV_CON, apply=True, t=1, r=1, s=1, n=0)
+cmds.delete(knee_PV_CON, ch=True)
 # PV con in front of knee
+
 
 # Connect PV con to knee IKH
 # Parent PV group under paw con

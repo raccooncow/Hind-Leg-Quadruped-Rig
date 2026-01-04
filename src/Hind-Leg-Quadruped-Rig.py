@@ -101,6 +101,9 @@ knee_IKH_GRP = cmds.group(knee_IKH, name='knee_IKH_GRP')
 # Parent it under paw con
 cmds.parent(knee_IKH_GRP, paw_CON)
 # Move grp PV to hock jnt
+cmds.xform(knee_IKH_GRP, ws=True, rp=hock_pos)
+cmds.makeIdentity(knee_IKH_GRP, apply=True, t=1, r=1, s=1, n=0)
+cmds.delete(knee_IKH_GRP, ch=True)
 
 
 # Cleanup freeze transform + delete history
